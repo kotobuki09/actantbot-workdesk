@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://actantos.com/platform/workdesk">
-    <img src="docs/images/actantos-logo-lockup.webp" alt="ActantOS" width="360">
+    <img src="docs/images/actantbot-brand.png" alt="ActantBot" width="136">
   </a>
 </p>
 
@@ -22,6 +22,9 @@
   <a href="https://github.com/kotobuki09/actantbot-workdesk/actions/workflows/docs.yml">
     <img src="https://github.com/kotobuki09/actantbot-workdesk/actions/workflows/docs.yml/badge.svg" alt="Documentation checks">
   </a>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-8fd14f" alt="MIT license">
+  </a>
 </p>
 
 WorkDesk is a self-hosted portal for the ActantBot family. It gives employees four focused surfaces for approved IT guidance, private security intake, access requests, and operations knowledge. The ActantOS kernel evaluates write actions against policy, signs the decision, and records an auditable receipt.
@@ -42,6 +45,19 @@ This repository is the public handoff for operators. It contains deployment guid
 - [ActantOS](https://actantos.com) is the product site.
 - [WorkDesk](https://actantos.com/platform/workdesk) explains the employee IT support portal.
 - [ERA Lab](https://eralab.si) provides the wider lab and project context.
+
+## ActantBot family
+
+<table align="center">
+  <tr>
+    <td align="center"><img src="docs/images/bots/actantbot-it.png" alt="ActantBot IT" width="108"><br><strong>IT</strong><br><sub>Runbooks</sub></td>
+    <td align="center"><img src="docs/images/bots/actantbot-secure.png" alt="ActantBot Secure" width="108"><br><strong>Secure</strong><br><sub>Incident intake</sub></td>
+    <td align="center"><img src="docs/images/bots/actantbot-access.png" alt="ActantBot Access" width="108"><br><strong>Access</strong><br><sub>Access requests</sub></td>
+    <td align="center"><img src="docs/images/bots/actantbot-know.png" alt="ActantBot Know" width="108"><br><strong>Know</strong><br><sub>Operations knowledge</sub></td>
+  </tr>
+</table>
+
+One portal gives each workflow a dedicated bot while the ActantOS kernel keeps write actions inside the approved policy boundary.
 
 ## What you deploy
 

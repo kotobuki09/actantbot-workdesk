@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://actantos.com/platform/workdesk">
-    <img src="docs/images/actantos-logo-lockup.webp" alt="ActantOS" width="360">
+    <img src="docs/images/actantbot-brand.png" alt="ActantBot" width="136">
   </a>
 </p>
 
@@ -35,6 +35,17 @@ Repo này là bộ tài liệu bàn giao cho operator. Repo chỉ chứa hướn
 - [ActantOS](https://actantos.com) là website sản phẩm.
 - [WorkDesk](https://actantos.com/platform/workdesk) giới thiệu portal hỗ trợ IT cho nhân viên.
 - [ERA Lab](https://eralab.si) cung cấp bối cảnh rộng hơn về lab và các dự án.
+
+## Gia đình ActantBot
+
+<table align="center">
+  <tr>
+    <td align="center"><img src="docs/images/bots/actantbot-it.png" alt="ActantBot IT" width="108"><br><strong>IT</strong><br><sub>Runbook</sub></td>
+    <td align="center"><img src="docs/images/bots/actantbot-secure.png" alt="ActantBot Secure" width="108"><br><strong>Secure</strong><br><sub>Tiếp nhận sự cố</sub></td>
+    <td align="center"><img src="docs/images/bots/actantbot-access.png" alt="ActantBot Access" width="108"><br><strong>Access</strong><br><sub>Yêu cầu truy cập</sub></td>
+    <td align="center"><img src="docs/images/bots/actantbot-know.png" alt="ActantBot Know" width="108"><br><strong>Know</strong><br><sub>Tri thức vận hành</sub></td>
+  </tr>
+</table>
 
 ## Luồng chính
 
