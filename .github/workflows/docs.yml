@@ -1,0 +1,20 @@
+name: Documentation checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  public-surface:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check the public surface
+        shell: pwsh
+        run: ./scripts/check-public-surface.ps1
+      - name: Parse the reference Compose file
+        run: docker compose -f deploy/docker-compose.reference.yml --env-file deploy/.env.example config

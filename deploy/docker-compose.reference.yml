@@ -1,0 +1,92 @@
+services:
+  workdesk-db:
+    image: ${POSTGRES_IMAGE}
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - workdesk_db_data:/var/lib/postgresql/data
+    networks:
+      - private
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  kernel-db:
+    image: ${POSTGRES_IMAGE}
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${KERNEL_POSTGRES_DB}
+      POSTGRES_USER: ${KERNEL_POSTGRES_USER}
+      POSTGRES_PASSWORD: ${KERNEL_POSTGRES_PASSWORD}
+    volumes:
+      - kernel_db_data:/var/lib/postgresql/data
+    networks:
+      - private
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${KERNEL_POSTGRES_USER} -d $${KERNEL_POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  kernel:
+    image: ${KERNEL_IMAGE}
+    restart: unless-stopped
+    environment:
+      NODE_ENV: ${NODE_ENV}
+      PORT: ${KERNEL_PORT}
+      HOST: 0.0.0.0
+      DATABASE_URL: ${KERNEL_DATABASE_URL}
+      ACTANTOS_EVALUATOR_MODE: ${ACTANTOS_EVALUATOR_MODE}
+      ACTANTOS_HMAC_SECRET: ${ACTANTOS_HMAC_SECRET}
+    expose:
+      - "${KERNEL_PORT}"
+    depends_on:
+      kernel-db:
+        condition: service_healthy
+    networks:
+      - private
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:$${PORT}/healthz || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+
+  workdesk:
+    image: ${WORKDESK_SERVER_IMAGE}
+    restart: unless-stopped
+    environment:
+      NODE_ENV: ${NODE_ENV}
+      PORT: ${WORKDESK_PORT}
+      HOST: 0.0.0.0
+      DATABASE_URL: ${WORKDESK_DATABASE_URL}
+      OIDC_ISSUER: ${OIDC_ISSUER}
+      OIDC_CLIENT_ID: ${OIDC_CLIENT_ID}
+      OIDC_CLIENT_SECRET: ${OIDC_CLIENT_SECRET}
+      OIDC_REDIRECT_URI: ${OIDC_REDIRECT_URI}
+      SESSION_SECRET: ${SESSION_SECRET}
+      KERNEL_URL: ${KERNEL_URL}
+      RUNBOOKS_DIR: ${RUNBOOKS_DIR}
+      WORKDESK_MODEL_ADAPTER: ${WORKDESK_MODEL_ADAPTER}
+      WORKDESK_DEV_LOGIN: "false"
+    ports:
+      - "127.0.0.1:${WORKDESK_PORT}:${WORKDESK_PORT}"
+    depends_on:
+      workdesk-db:
+        condition: service_healthy
+      kernel:
+        condition: service_healthy
+    networks:
+      - private
+
+volumes:
+  workdesk_db_data:
+  kernel_db_data:
+
+networks:
+  private:
+    internal: true

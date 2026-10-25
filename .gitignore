@@ -1,0 +1,10 @@
+deploy/.env
+deploy/.env.*
+!deploy/.env.example
+*.log
+*.sql
+*.pem
+*.key
+.DS_Store
+.idea/
+.vscode/
