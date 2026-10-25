@@ -148,4 +148,4 @@ Read [SECURITY.md](SECURITY.md). Never open a public issue with a secret, token,
 
 ## License
 
-No open-source license is declared in this repository yet. Copyright and reuse permissions remain with the repository owner until a license is added.
+This repository is licensed under the [MIT License](LICENSE). Copyright (c) 2026 kotobuki09.
