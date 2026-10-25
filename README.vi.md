@@ -18,6 +18,14 @@
   <a href="docs/operations.md">Operations</a>
 </p>
 
+## Tổng quan sản phẩm
+
+<p align="center">
+  <img src="docs/images/workdesk-overview.png" alt="Tổng quan sản phẩm ActantOS WorkDesk" width="860">
+</p>
+
+Ảnh tổng quan cho thấy portal WorkDesk hiện tại, bốn bề mặt ActantBot, và ranh giới triển khai self-hosted.
+
 WorkDesk là portal self-hosted cho nhóm ActantBot. Portal có bốn bot chuyên biệt cho hướng dẫn IT, tiếp nhận sự cố bảo mật, yêu cầu quyền truy cập, và tri thức vận hành. ActantOS kernel kiểm tra các thao tác ghi theo policy, ký quyết định, và lưu receipt có thể audit.
 
 Repo này là bộ tài liệu bàn giao cho operator. Repo chỉ chứa hướng dẫn deploy, mẫu cấu hình, kiến trúc, vận hành, xử lý lỗi, và ảnh giao diện hiện tại. Repo không chứa source code WorkDesk, dữ liệu khách hàng, tài khoản lab, hoặc secret production.

@@ -27,6 +27,14 @@
   </a>
 </p>
 
+## Product overview
+
+<p align="center">
+  <img src="docs/images/workdesk-overview.png" alt="ActantOS WorkDesk product overview" width="860">
+</p>
+
+The overview shows the current WorkDesk portal, the four ActantBot surfaces, and the self-hosted deployment boundary.
+
 WorkDesk is a self-hosted portal for the ActantBot family. It gives employees four focused surfaces for approved IT guidance, private security intake, access requests, and operations knowledge. The ActantOS kernel evaluates write actions against policy, signs the decision, and records an auditable receipt.
 
 This repository is the public handoff for operators. It contains deployment guidance, configuration templates, architecture notes, operations procedures, and current product screenshots. It does not contain the WorkDesk application source, customer data, lab credentials, or production secrets.
