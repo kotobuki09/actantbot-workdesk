@@ -56,3 +56,7 @@ Người dùng đăng nhập qua OIDC. Portal gửi yêu cầu tới WorkDesk se
 Không mở PostgreSQL hoặc kernel ra internet. Không dùng credential trong file mẫu cho môi trường thật. Không bật development login trong production. Không đưa password, OTP, raw provider token, dữ liệu khách hàng, hoặc secret vào issue public.
 
 Hướng dẫn tiếng Anh trong `README.md` và `docs/` là bản operator chính.
+
+## Giấy phép
+
+Repo này được phát hành theo [MIT License](LICENSE). Copyright (c) 2026 kotobuki09.
