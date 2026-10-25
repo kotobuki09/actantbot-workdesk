@@ -1,6 +1,28 @@
+<p align="center">
+  <a href="https://actantos.com/platform/workdesk">
+    <img src="docs/images/actantos-logo-lockup.webp" alt="ActantOS" width="360">
+  </a>
+</p>
+
 # ActantBot WorkDesk
 
-Public self-hosting guidance and deployment references for ActantOS WorkDesk.
+<p align="center">
+  Self-hosting guidance and deployment references for the ActantOS WorkDesk portal.
+</p>
+
+<p align="center">
+  <a href="https://actantos.com">ActantOS</a> ·
+  <a href="https://actantos.com/platform/workdesk">WorkDesk</a> ·
+  <a href="https://eralab.si">ERA Lab</a> ·
+  <a href="docs/hosting.md">Hosting</a> ·
+  <a href="docs/operations.md">Operations</a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/kotobuki09/actantbot-workdesk/actions/workflows/docs.yml">
+    <img src="https://github.com/kotobuki09/actantbot-workdesk/actions/workflows/docs.yml/badge.svg" alt="Documentation checks">
+  </a>
+</p>
 
 WorkDesk is a self-hosted portal for the ActantBot family. It gives employees four focused surfaces for approved IT guidance, private security intake, access requests, and operations knowledge. The ActantOS kernel evaluates write actions against policy, signs the decision, and records an auditable receipt.
 
@@ -14,6 +36,12 @@ This repository is the public handoff for operators. It contains deployment guid
 - [Troubleshooting](docs/troubleshooting.md) maps common symptoms to checks.
 - [Vietnamese guide](README.vi.md) provides the same operator path in Vietnamese.
 - [ActantOS WorkDesk](https://actantos.com/platform/workdesk) shows the product and the current portal interface.
+
+## ActantOS ecosystem
+
+- [ActantOS](https://actantos.com) is the product site.
+- [WorkDesk](https://actantos.com/platform/workdesk) explains the employee IT support portal.
+- [ERA Lab](https://eralab.si) provides the wider lab and project context.
 
 ## What you deploy
 

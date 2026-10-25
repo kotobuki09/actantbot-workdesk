@@ -1,6 +1,22 @@
+<p align="center">
+  <a href="https://actantos.com/platform/workdesk">
+    <img src="docs/images/actantos-logo-lockup.webp" alt="ActantOS" width="360">
+  </a>
+</p>
+
 # ActantBot WorkDesk
 
-Tài liệu public để tự host và vận hành ActantOS WorkDesk.
+<p align="center">
+  Tài liệu self-hosting và triển khai cho portal ActantOS WorkDesk.
+</p>
+
+<p align="center">
+  <a href="https://actantos.com">ActantOS</a> ·
+  <a href="https://actantos.com/platform/workdesk">WorkDesk</a> ·
+  <a href="https://eralab.si">ERA Lab</a> ·
+  <a href="docs/hosting.md">Hosting</a> ·
+  <a href="docs/operations.md">Operations</a>
+</p>
 
 WorkDesk là portal self-hosted cho nhóm ActantBot. Portal có bốn bot chuyên biệt cho hướng dẫn IT, tiếp nhận sự cố bảo mật, yêu cầu quyền truy cập, và tri thức vận hành. ActantOS kernel kiểm tra các thao tác ghi theo policy, ký quyết định, và lưu receipt có thể audit.
 
@@ -13,6 +29,12 @@ Repo này là bộ tài liệu bàn giao cho operator. Repo chỉ chứa hướn
 - [Operations guide](docs/operations.md) mô tả health check, backup, nâng cấp, và degraded mode.
 - [Troubleshooting](docs/troubleshooting.md) ghép triệu chứng với cách kiểm tra.
 - [ActantOS WorkDesk](https://actantos.com/platform/workdesk) giới thiệu sản phẩm và giao diện portal hiện tại.
+
+## Liên kết hệ sinh thái
+
+- [ActantOS](https://actantos.com) là website sản phẩm.
+- [WorkDesk](https://actantos.com/platform/workdesk) giới thiệu portal hỗ trợ IT cho nhân viên.
+- [ERA Lab](https://eralab.si) cung cấp bối cảnh rộng hơn về lab và các dự án.
 
 ## Luồng chính
 
